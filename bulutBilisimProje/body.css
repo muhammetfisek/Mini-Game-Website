@@ -1,0 +1,9 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+.click{}
+
+.score{font-family: arial; font-size: 2vw; position: absolute; right:5%; top:3%; z-index: 5;}
+
+.tekrar{display:none;position: absolute; right:15%; top:20%; z-index: 5;}

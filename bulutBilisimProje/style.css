@@ -1,0 +1,385 @@
+        /* navbar start */
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 5;
+            overflow: hidden;
+            background-color: #333;
+          }
+          
+          li {float: left;
+           
+          } 
+          
+          li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+          }
+          
+          li a:hover {
+            background-color: #111;
+          }
+            /* navbar end */
+           
+          .click{}
+            /* columns start */
+
+        .gif{
+            
+            position: relative;
+            object-fit:fill;
+            text-align: center;
+            margin-top: 5%;
+            padding: 0%;
+            opacity: 0%;
+            
+        }
+        
+        .yazi{
+            margin-top: 15%;
+            font:25px Courier, monospace;
+            
+        }
+         .left-col:hover{
+            
+            transform: scale(1.03), linear;
+            transition: 0.6s;
+            position:relative;
+            
+            /*Fallback if gradeints don't work */
+            background: #000000;
+           /*Linear gradient... */
+            background: radial-gradient(
+            at center, #064d0f, #030303
+            );
+        } 
+
+        .left-col:hover .gif{
+            opacity: 100%;
+            transition: 1s;
+            transform: scale(1.08);
+            
+        }
+
+        .left-col:hover .yazi{
+            
+            transition: 0.6s;
+            transform: scale(1.04);
+            
+        }
+
+        .center-col:hover{
+            
+            transform: scale(1.03), linear;
+            transition: 0.6s;
+            position:relative;
+            
+            /*Fallback if gradeints don't work */
+            background: #000000;
+           /*Linear gradient... */
+            background: radial-gradient(
+            at center, #064d0f, #030303
+            );
+        }
+
+        .center-col:hover .gif{
+            opacity: 100%;
+            transition: 1s;
+            transform: scale(1.08);
+            
+        }
+
+        .center-col:hover .yazi{
+            
+            transition: 1s;
+            transform: scale(1.03);
+            
+        }
+
+        .right-col:hover{
+            
+            transform: scale(1.03), linear;
+            transition: 0.6s;
+            position:relative;
+
+            /*Fallback if gradeints don't work */
+            background: #000000;
+           /*Linear gradient... */
+            background: radial-gradient(
+            at center, #4f5150, #ffffff
+            );
+        }
+
+        .right-col:hover .gif{
+            opacity: 100%;
+            transition: 1s;
+            transform: scale(1.08);
+            
+        }
+
+        .right-col:hover .yazi{
+            
+            transition: 1s;
+            transform: scale(1.03);
+            
+        }
+
+        body {
+            margin: 0;
+            
+        }
+        h1, h2 {
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 700;
+            text-align: center;
+        }
+        p {
+            font-family: 'Courier New', Courier, monospace;
+            position: relative;
+        }
+
+        
+        
+        .container div {
+            
+            padding: 1%;
+            box-sizing: border-box;
+            position: relative;
+            
+        }
+        .left-col{
+            
+            /* background-color: powderblue; */
+            text-align: center;
+            width: 33%;
+            float: left;
+            min-height: 873px;
+            max-height: 873px;
+
+           /*Fallback if gradeints don't work */
+            background: #000000;
+           /*Linear gradient... */
+            background: radial-gradient(
+            at center, #064d0f, #030303
+            );
+            
+        }
+        .center-col {
+         
+            text-align: center;
+            width: 34%;
+            float: left;
+            min-height: 873px;
+            max-height: 873px;
+
+            /*Fallback if gradeints don't work */
+            background: #2f1700;
+           /*Linear gradient... */
+            background: radial-gradient(
+            at center, #864100, #2f1700
+            );
+        }
+        .right-col {
+            
+            
+            text-align: center;
+            width: 33%;
+            float: right;
+            min-height: 873px;
+            max-height: 873px;
+
+            /*Fallback if gradeints don't work */
+            background: #810f0f;
+           /*Linear gradient... */
+            background: radial-gradient(
+              at center, #ffffff, #383939
+            );
+        }
+        /* columns end */
+            
+            /* footer start */
+        .footer {
+            clear: both;
+            font: 30px Courier, sans-serif;
+            font-weight: bold;
+            background-color: skyblue;
+            text-align: center;
+            width: 100%;
+            height: 50px;
+            padding-top: 10px;
+            box-sizing: border-box;
+        }
+            /* footer end */
+
+            /* form start */
+            
+body {font-family: 'Courier New', Courier, monospace;}
+* {box-sizing: border-box;}
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+
+  background-color: #555;
+  color: white;
+  margin-top: 5%;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  width: 280px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  bottom: 650px;
+  left: 25px;
+  border: none;
+  z-index: 8;
+  opacity: 0.85;
+}
+.form-popup2 {
+    display: none;
+    bottom: 650px;
+    left: 29px;
+    border: none;
+    z-index: 8;
+    opacity: 0.85;
+  }
+  .form-popup3 {
+    display: none;
+    bottom: 650px;
+    left: 25px;
+    border: none;
+    z-index: 8;
+    opacity: 0.85;
+  }
+
+  .form-close{
+    transition: 0.6s;
+    display:block;
+  }
+
+/* Add styles to the form container */
+ .form-container {
+  max-width: 300px;
+  max-height: 0px;
+  padding: 10px;
+  margin-left: 20%;
+  
+  
+} 
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f10f;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+    /* form end */
+
+    /* buttons start */
+
+    * {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+  }
+  
+  .buttons {
+      margin: 10%;
+      text-align: center;
+  }
+  
+  .btn-hover {
+      width: 200px;
+      font-size: 16px;
+      font-weight: 600;
+      color: #fff;
+      cursor: pointer;
+      margin: 20px;
+      height: 55px;
+      text-align:center;
+      border: none;
+      background-size: 300% 100%;
+  
+      border-radius: 50px;
+      moz-transition: all .4s ease-in-out;
+      -o-transition: all .4s ease-in-out;
+      -webkit-transition: all .4s ease-in-out;
+      transition: all .4s ease-in-out;
+  }
+  
+  .btn-hover:hover {
+      background-position: 100% 0;
+      moz-transition: all .4s ease-in-out;
+      -o-transition: all .4s ease-in-out;
+      -webkit-transition: all .4s ease-in-out;
+      transition: all .4s ease-in-out;
+  }
+  
+  .btn-hover:focus {
+      outline: none;
+  }
+  
+  
+  .btn-hover.color-8 {
+      background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
+      box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+  }
+
+  .btn-hover.color-5 {
+    background-image: linear-gradient(to right, #0ba360, #3cba92, #30dd8a, #2bb673);
+    box-shadow: 0 4px 15px 0 rgba(23, 168, 108, 0.75);
+  }
+
+  .btn-hover.color-11 {
+    background-image: linear-gradient(to right, #eb3941, #f15e64, #e14e53, #e2373f);  
+    box-shadow: 0 5px 15px rgba(242, 97, 103, .4);
+}
+
+.btn-hover.color-2 {
+  background-image: linear-gradient(to right, #5e3610, #43221de6, #32120dd0, #53280d);
+  box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+}
+
+.btn-hover.color-3 {
+  background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
+  box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+}
+    
+ /*buttons end */

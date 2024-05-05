@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>BULUT OYUN</title>
+    <link href="style.css" rel="stylesheet" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <script>
+      $(document).mousemove(function (event) {
+        windowWidth = $(document.getElementById("left-col")).width();
+        windowHeight = $(document.getElementById("left-col")).height();
+
+        windowWidth2 = $(document.getElementById("center-col")).width();
+        windowHeight2 = $(document.getElementById("center-col")).height();
+
+        windowWidth3 = $(document.getElementById("right-col")).width();
+        windowHeight3 = $(document.getElementById("right-col")).height();
+
+        mouseXpercentage = Math.round((event.pageX / windowWidth) * 100);
+        mouseYpercentage = Math.round((event.pageY / windowHeight) * 100);
+
+        mouseXpercentage2 = Math.round((event.pageX / windowWidth2) * 30);
+        mouseYpercentage2 = Math.round((event.pageY / windowHeight2) * 100);
+
+        mouseXpercentage3 = Math.round((event.pageX / windowWidth3) * 5);
+        mouseYpercentage3 = Math.round((event.pageY / windowHeight3) * 100);
+
+        $(".left-col:hover").css(
+          "background",
+          "radial-gradient(at " +
+            mouseXpercentage +
+            "% " +
+            mouseYpercentage +
+            "%, #064d0f, #030303)"
+        );
+        $(".center-col:hover").css(
+          "background",
+          "radial-gradient(at " +
+            mouseXpercentage2 +
+            "% " +
+            mouseYpercentage2 +
+            "%, #6d3500, #2f1700)"
+        );
+        $(".right-col:hover").css(
+          "background",
+          "radial-gradient(at " +
+            mouseXpercentage3 +
+            "% " +
+            mouseYpercentage3 +
+            "%, #ffffff, #383939)"
+        );
+      });
+
+      function openForm() {
+        document.getElementById("myForm").style.display = "block";
+      }
+
+      function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+      }
+
+      function openForm2() {
+        document.getElementById("myForm2").style.display = "block";
+      }
+
+      function closeForm2() {
+        document.getElementById("myForm2").style.display = "none";
+      }
+
+      function openForm3() {
+        document.getElementById("myForm3").style.display = "block";
+      }
+
+      function closeForm3() {
+        document.getElementById("myForm3").style.display = "none";
+      }
+    </script>
+  </head>
+
+  <body>
+    <!--Navbar Start-->
+    <ul>
+      <li><a class="active" href="index.html">Anasayfa</a></li>
+      <li><a href="skor.html">Skor Tablosu</a></li>
+    </ul>
+
+    <!--Navbar End-->
+    <!--Content Start-->
+    <div class="container">
+      <div class="left-col" id="left-col">
+        <h2>Left</h2>
+
+        <img class="gif" src="images\tennis.gif" width="500" height="320" />
+
+        <button class="btn-hover color-8" onclick="openForm()">Oyna</button>
+        <p class="yazi">
+          Kolay tenis oyunu oyna. Fareyi nereye hareket ettirirsen pedal oraya
+          gider. Pedalı hareket ettirerek topun kendi duvarınıza değmesini
+          engellemelisiniz.
+        </p>
+        <div class="form-popup" id="myForm">
+          <form class="form-container" action="game.html" id="contactForm">
+            <label for="name"><b>İsim:</b></label>
+            <input
+              type="text"
+              placeholder="isminizi giriniz"
+              id="name"
+              required
+            />
+            <button type="submit" id="name" class="btn-hover color-5">
+              Başla
+            </button>
+            <button
+              type="button"
+              class="btn-hover color-11"
+              onclick="closeForm()"
+            >
+              kapat
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="center-col" id="center-col">
+        <h2>Center</h2>
+        <img class="gif" src="images\mole.gif" width="500" height="320" />
+        <button class="btn-hover color-2" onclick="openForm2()">Oyna</button>
+        <p class="yazi">
+          Köstebek oyunu oyna. Köstebekler yuvalardan kafalarını çıkartır. Bize
+          düşen görev fare ile hareket ettirdiğimiz balyozu kullanarak
+          köstebeklere vurmak. Zamanında vurduğumuz her köstebek bize artı puan
+          kazandırır.
+        </p>
+        <div class="form-popup2" id="myForm2">
+          <form class="form-container" action="wack.html" id="contactForm">
+            <label for="name"><b>İsim:</b></label>
+            <input
+              type="text"
+              placeholder="isminizi giriniz"
+              id="name"
+              required
+            />
+            <button type="submit" id="name" class="btn-hover color-5">
+              Başla
+            </button>
+            <button
+              type="button"
+              class="btn-hover color-11"
+              onclick="closeForm2()"
+            >
+              kapat
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="right-col" id="right-col">
+        <h2>Right</h2>
+        <img class="gif" src="images\snake.gif" width="500" height="320" />
+        <button class="btn-hover color-8" onclick="openForm3()">Oyna</button>
+        <p class="yazi">
+          Yılan oyunu oyna. Yeşil renkli yılan ile kırmızı renkli besinleri
+          yemeye çalıştığımız ufak bir oyun. Yılanı yön tuşları ile hareket
+          ettiriyoruz. Kırmızı besinleri bize ayrılan alandan dışarı çıkmayarak
+          ve kendimize değmeyerek yemeye çalışmalıyız.
+        </p>
+        <div class="form-popup3" id="myForm3">
+          <form class="form-container" id="form" action="fakeindex.html">
+            <label for="email2"><b>İsim:</b></label>
+            <input
+              type="text"
+              placeholder="isminizi giriniz"
+              name="email2"
+              required
+            />
+            <button type="submit" class="btn-hover color-5">Başla</button>
+            <button
+              type="button"
+              class="btn-hover color-11"
+              onclick="closeForm3()"
+            >
+              kapat
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!--Content End-->
+    <!--Footer Start-->
+    <div class="footer">&copy; All Rights Reserved.</div>
+    <!--Footer End-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="./mail.js"></script>
+  </body>
+</html>

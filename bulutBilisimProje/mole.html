@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+        <style>
+                body{width: 100%; height: 100%; overflow:hidden;}
+
+                .mole{
+                    background-color: rgb(134, 65, 0);
+                    border-radius:900px;
+                    height: 100%;
+                    width: 10%;
+                    position:absolute;
+                    top: 100%;
+                    background-image: url("mole1.jpg");
+                    background-repeat: no-repeat;
+                    background-size: 80%;
+                    background-position-x: 50%;
+                    background-position-y: 5%;
+                }
+
+                .left_ear{
+                    background-color: rgb(134,65,0);
+                    border-radius: 100px;
+                    position: absolute;
+                    float:left;
+                    min-width: 30%;
+                    padding-top: 30%;
+                    z-index: -3;
+                    
+                    
+                }
+
+                .right_ear{
+                    background-color: rgb(134,65,0);
+                    border-radius: 100px;
+                    position: absolute;
+                    float:right;
+                    min-width: 30%;
+                    padding-top: 30%;
+                    left: 70%;
+                    z-index: -3;
+                }
+
+                #mole1 {left:20%;}
+                #mole2 {left:45%;}
+                #mole3 {left:70%;}
+
+                .score{font-family: arial; font-size: 2vw; position: absolute; right:5%; top:3%; z-index: 5;}
+
+        </style>
+        <script>
+
+            jQuery(document).ready(function(){
+
+                var add =0;
+                
+                function game_over(){
+                    
+                    jQuery('.mole').animate({'top':'100%'},300);
+                    jQuery('.score').html("OYUN BITTI");
+                    jQuery('.score').append('<div class="try_again">TEKRAR OYNA</div>');
+                };
+                function start(){
+                    add=0;
+                    jQuery('.score').html('Skor: ' + add);
+                    jQuery('.mole').animate({'top':'0%'},5000), function(){
+                    jQuery('.mole').animate({'top':'100%'},300);
+                    
+                    }};
+
+                jQuery('.mole').hover(function(){
+
+                    jQuery(this).css('background-image','url(mole.jpg)');
+                    jQuery(this).stop().animate({'top':'100%'},300, function(){
+
+                        add=add-(-1);
+                        jQuery('.score').html('Score: ' + add);
+                        jQuery(this).css('background-image','url(mole1.jpg)');
+                        jQuery(this).animate({'top':'0%' },5000);
+                    });
+                });
+                start();
+            });
+        </script>
+
+    </head>
+    <body>
+        <div class="score">Skor: 0
+        </div>
+        <div class="mole" id="mole1">
+            <div class ="left_ear"></div>
+            <div class ="right_ear"></div>
+        </div>
+        <div class="mole" id="mole2">
+            <div class ="left_ear"></div>
+            <div class ="right_ear"></div>
+        </div>
+        <div class="mole" id="mole3">
+            <div class ="left_ear"></div>
+            <div class ="right_ear"></div>
+        </div>
+
+    </body>
+
+</html>
